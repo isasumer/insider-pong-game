@@ -70,7 +70,6 @@
     button: {
       display: "flex",
       justifyContent: "space-evenly",
-
       textAlign: "center",
       position: "absolute",
       heigth: 50,
@@ -78,7 +77,8 @@
       left: 350,
       top: 280,
       zIndex: 1000,
-      fontSize: 50,
+      fontSize: 30,
+      borderRadius: 10,
     },
   };
 
@@ -99,6 +99,11 @@
     setEvents();
     roll();
     loop();
+    $(function () {
+      alert(
+        "Welcome to Pong Game. Player-1 buttons are 'w' and 's'. Player-2 buttons are 'arrow up' and 'arrow down' "
+      );
+    });
   }
 
   function draw() {
@@ -155,7 +160,6 @@
         CSS.stick1.top = CSS.stick1.top + CONSTS.stick1Speed;
         $("#stick-1").css("top", CSS.stick1.top);
       }
-
       if (
         (CSS.stick2.top > 0 && CONSTS.stick2Speed === -5) ||
         (CSS.stick2.top < CSS.arena.height - CSS.stick.height &&
@@ -164,14 +168,8 @@
         CSS.stick2.top = CSS.stick2.top + CONSTS.stick2Speed;
         $("#stick-2").css("top", CSS.stick2.top);
       }
-      // CSS.stick2.top > 0 || CONSTS.stick2Speed !== -5
-      //   ? (CSS.stick2.top = CSS.stick2.top + CONSTS.stick2Speed)
-      //   : null;
-      // $("#stick-2").css("top", CSS.stick2.top);
-
       CSS.ball.top += CONSTS.ballTopSpeed;
       CSS.ball.left += CONSTS.ballLeftSpeed;
-
       if (
         CSS.ball.top <= 0 ||
         CSS.ball.top >= CSS.arena.height - CSS.ball.height
