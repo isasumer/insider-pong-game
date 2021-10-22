@@ -83,7 +83,7 @@
   };
 
   var CONSTS = {
-    gameSpeed: 20,
+    gameSpeed: 10,
     score1: 0,
     score2: 0,
     board: 9,
