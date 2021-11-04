@@ -1,6 +1,5 @@
 # INSDR Pong Game
-
-https://www.youtube.com/watch?v=fiShX2pTz9A
+https://isasumer.github.io/insider-pong-game/
 
 We are going to develop the classic Atari game “Pong”.
 
